@@ -16,9 +16,9 @@ $('#search').bind('keydown',function(){
 				$('.search-result').html(html);
 				$('#search').bind('keydown',function(ev){
 					var oEvent = ev || window.event;
-					oEvent.preventDefault(oEvent);
 				if (oEvent.keyCode == 13){
 					location.href ='https://www.haosou.com/s?q='+seaText;
+					oEvent.preventDefault(oEvent);
 				}
 				$('#list').show().css({
 					top:$('.box').offset().top+$('.box').height(),
